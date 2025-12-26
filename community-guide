@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Staff - Cozy Small Park</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+            padding: 0;
+        }
+
+       
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .hero {
+            background: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #FF4757;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        h2 {
+            color: #1a1a1a;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 50px 0 25px 0;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #1a1a1a;
+            margin: 30px 0 15px 0;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .section-intro {
+            background: #fff5f5;
+            padding: 20px;
+            border-left: 4px solid #FF4757;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .section-intro strong {
+            color: #FF4757;
+        }
+
+        .rules-box {
+            background: #fff9f9;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid #FFE0E0;
+        }
+
+        .rules-box h3 {
+            color: #FF4757;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .rules-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rules-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #333;
+        }
+
+        .rules-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FF4757;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        th {
+            background: #FF4757;
+            color: white;
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background: #fafafa;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-box {
+            background: #fff9e6;
+            border: 1px solid #FFE5B4;
+            border-left: 4px solid #FFA500;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .highlight-box h4 {
+            color: #FF6B35;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .critical-box {
+            background: #fff5f5;
+            border: 1px solid #FFD4D4;
+            border-left: 4px solid #FF4757;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .critical-box h4 {
+            color: #FF4757;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .critical-box ul,
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .critical-box li,
+        .highlight-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .critical-box li:before,
+        .highlight-box li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #FF4757;
+            font-weight: bold;
+        }
+
+        .role-box {
+            background: #f0f8ff;
+            border: 1px solid #D4E8FF;
+            border-left: 4px solid #4A90E2;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .role-box h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .role-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .role-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #444;
+        }
+
+        .role-box li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #4A90E2;
+            font-weight: bold;
+        }
+
+        .quick-ref {
+            background: #f0fff0;
+            border: 1px solid #C8E6C9;
+            border-left: 4px solid #4CAF50;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .quick-ref h4 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .quick-ref ol {
+            padding-left: 20px;
+        }
+
+        .quick-ref li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .template-box {
+            background: #f5f5f5;
+            border-left: 4px solid #999;
+            padding: 18px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .list-grid-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .list-grid-item h4 {
+            color: #FF4757;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .list-grid-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-grid-item li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .list-grid-item li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #FF4757;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            padding: 40px;
+            text-align: center;
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer strong {
+            color: #FF4757;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #FF4757;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .list-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .navbar-nav a {
+                text-align: center;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            td, th {
+                padding: 10px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            .hero {
+                border: none;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            table {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="content">
+        <!-- ALUR ESKALASI MASALAH -->
+        <h2 id="alur">⚙️ Alur Eskalasi Masalah</h2>
+        
+        <div class="section-intro">
+            <p>Penanganan masalah di Cozy Small Park dibagi menjadi dua jalur utama: <strong>tertangkap tangan di dalam game</strong> atau <strong>berdasarkan laporan pemain</strong>. Setiap kasus ditindaklanjuti sesuai tingkat keparahan dan tanggung jawab Staff.</p>
+        </div>
+
+        <h3>🎮 Kasus Tertangkap Tangan di Dalam Game</h3>
+        <p style="margin-bottom: 15px;">Jika pelanggaran terjadi saat Staff sedang berada di lokasi:</p>
+        
+        <div class="critical-box">
+            <h4>⚡ Pelanggaran Berat (Teknis)</h4>
+            <p style="margin-bottom: 12px;"><strong>Contoh:</strong> Exploit, script abuse, cheat, bypass sistem, atau penggunaan tools ilegal</p>
+            <ul>
+                <li>Staff dapat langsung melakukan <strong>Permanent Ban</strong> tanpa diskusi lebih lanjut</li>
+                <li>Bukti wajib dicatat dalam bentuk log, video, atau screenshot</li>
+                <li>Pelanggaran teknis berat dianggap berisiko tinggi terhadap keamanan game</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h4>⚠️ Pelanggaran Serius Non-Teknis</h4>
+            <p style="margin-bottom: 12px;"><strong>Contoh:</strong> Pelecehan verbal berat, provokasi berulang, toxic ekstrem, hate speech</p>
+            <ul>
+                <li>Staff mengamankan situasi dengan mute atau kick sementara</li>
+                <li>Kasus <strong>WAJIB</strong> didiskusikan terlebih dahulu dengan Head Staff</li>
+                <li>Keputusan akhir ditentukan oleh <strong>Head Staff</strong> (ban 1-7 hari atau permanent)</li>
+            </ul>
+        </div>
+
+        <h3>📋 Kasus Berdasarkan Laporan Pemain (Report System)</h3>
+        <p style="margin-bottom: 15px;">Jika pemain dilaporkan oleh pengguna lain melalui sistem report:</p>
+        
+        <table>
+            <tbody>
+                <tr style="background: #fafafa;">
+                    <td style="font-weight: 600; width: 20%; border: none;">Penanda Khusus</td>
+                    <td style="border: none;">Pemain yang dilaporkan mendapatkan penanda khusus hanya bisa dilihat oleh Staff</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 600; border: none;">Akses Laporan</td>
+                    <td style="border: none;">Staff dapat membuka daftar laporan lengkap dengan jenis pelanggaran & frekuensi</td>
+                </tr>
+                <tr style="background: #fafafa;">
+                    <td style="font-weight: 600; border: none;">Analisis Pola</td>
+                    <td style="border: none;">Lihat pola perilaku pemain (apakah berulang atau insiden sekali)</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 600; border: none;">Tindakan Awal</td>
+                    <td style="border: none;">Berdasarkan pola → Memberi peringatan, pengawasan, atau tindakan langsung</td>
+                </tr>
+                <tr style="background: #fafafa;">
+                    <td style="font-weight: 600; border: none;">Eskalasi</td>
+                    <td style="border: none;">Kasus berat/berulang → Konsultasi Head Staff sebelum sanksi lanjutan</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="role-box">
+            <h4>📌 Tindakan Berdasarkan Jumlah Laporan & Bukti</h4>
+            <ul>
+                <li>Memberi peringatan sopan dan tegas</li>
+                <li>Melakukan pengawasan lebih lanjut</li>
+                <li>Melakukan tindakan langsung (warn, mute, kick, atau ban)</li>
+                <li><strong>Tetap ikuti batasan wewenang</strong> - diskusikan kasus berat dengan Head Staff</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 1 -->
+        <h2 id="rules">1️⃣ Etika & Perilaku</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Gunakan bahasa yang baik dan sopan</li>
+                <li>Bersikap ramah dan tidak menyinggung</li>
+                <li>Tidak membuat keributan</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spam ringan</td>
+                    <td>Teguran / Mute 5–10 menit</td>
+                </tr>
+                <tr>
+                    <td>Caps berlebihan</td>
+                    <td>Mute 5–15 menit</td>
+                </tr>
+                <tr>
+                    <td>Off-topic berulang</td>
+                    <td>Mute 10–20 menit</td>
+                </tr>
+                <tr>
+                    <td>Mengganggu pemain lain</td>
+                    <td>Kick / Mute 30 menit</td>
+                </tr>
+                <tr>
+                    <td>Provokasi kecil</td>
+                    <td>Mute 30–60 menit</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 2 -->
+        <h2>2️⃣ Toxic & Bullying</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Dilarang toxic, bullying, atau melecehkan pemain lain</li>
+                <li>Ciptakan lingkungan positif di Cozy Small Park</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Toxic ringan</td>
+                    <td>Mute 1 jam</td>
+                </tr>
+                <tr>
+                    <td>Toxic berulang</td>
+                    <td>Ban 12–24 jam</td>
+                </tr>
+                <tr>
+                    <td>Bullying / pelecehan</td>
+                    <td>Ban 3 hari</td>
+                </tr>
+                <tr>
+                    <td>Hate speech ringan</td>
+                    <td>Ban 7 hari</td>
+                </tr>
+                <tr>
+                    <td>Hate speech berat</td>
+                    <td>Permanent Ban</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 3 -->
+        <h2>3️⃣ Spam & Keributan</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Dilarang spam chat, spam VC, atau mengganggu suasana</li>
+                <li>Jaga kualitas komunikasi komunitas</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spam chat</td>
+                    <td>Mute 15–30 menit</td>
+                </tr>
+                <tr>
+                    <td>Spam berulang</td>
+                    <td>Kick</td>
+                </tr>
+                <tr>
+                    <td>Spam masif</td>
+                    <td>Ban 1–3 hari</td>
+                </tr>
+                <tr>
+                    <td>Keributan besar</td>
+                    <td>Ban 3 hari</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 4 -->
+        <h2>4️⃣ Cheating, Exploit & Bug Abuse</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Dilarang cheat, exploit, atau menyalahgunakan bug</li>
+                <li>Jaga integritas gameplay Cozy Small Park</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bug abuse ringan</td>
+                    <td>Ban 3 hari</td>
+                </tr>
+                <tr>
+                    <td>Exploit / cheat</td>
+                    <td>Ban 7–30 hari</td>
+                </tr>
+                <tr>
+                    <td>Bypass sistem</td>
+                    <td>Permanent Ban</td>
+                </tr>
+                <tr>
+                    <td>Akun alternatif untuk evade</td>
+                    <td>Permanent Ban</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 5 -->
+        <h2>5️⃣ Ancaman & Keamanan</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Dilarang mengancam atau menyebar data pribadi</li>
+                <li>Lindungi privasi & keselamatan komunitas</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ancaman</td>
+                    <td>Ban 7 hari</td>
+                </tr>
+                <tr>
+                    <td>Doxing</td>
+                    <td>Permanent Ban</td>
+                </tr>
+                <tr>
+                    <td>Pelecehan berat</td>
+                    <td>Permanent Ban</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 6 -->
+        <h2>6️⃣ Voice Chat (VC) - Cozy Small Park</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Gunakan VC dengan bertanggung jawab</li>
+                <li>Tidak boleh noise berlebihan, musik keras, atau audio spam</li>
+                <li>Hormati pemain lain yang sedang bermain</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Noise/echo ringan</td>
+                    <td>Teguran lisan</td>
+                </tr>
+                <tr>
+                    <td>Musik/audio berlebihan</td>
+                    <td>Kick dari VC</td>
+                </tr>
+                <tr>
+                    <td>VC spam / keributan</td>
+                    <td>Mute VC 30 menit–1 jam</td>
+                </tr>
+                <tr>
+                    <td>Ancaman/toxic di VC</td>
+                    <td>Ban VC 24 jam</td>
+                </tr>
+                <tr>
+                    <td>Streaming tanpa izin di VC</td>
+                    <td>Kick + warning</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION 7 -->
+        <h2>7️⃣ Kepatuhan Staff</h2>
+        <div class="rules-box">
+            <h3>Rules</h3>
+            <ul>
+                <li>Pemain wajib mematuhi arahan Staff</li>
+                <li>Hormati keputusan Staff</li>
+            </ul>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pelanggaran</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Melawan Staff</td>
+                    <td>Ban 1–3 hari</td>
+                </tr>
+                <tr>
+                    <td>Menghina Staff</td>
+                    <td>Ban 7 hari</td>
+                </tr>
+                <tr>
+                    <td>Mengganggu kerja Staff</td>
+                    <td>Ban 3–7 hari</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SISTEM ESKALASI -->
+        <h2>📈 Sistem Eskalasi Hukuman</h2>
+        <div class="highlight-box">
+            <h4>Aturan Eskalasi</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF6B35;">→</span> <strong>2× pelanggaran sama</strong> → hukuman naik 1 tingkat</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF6B35;">→</span> <strong>3× mute</strong> → ban 24 jam</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF6B35;">→</span> <strong>Riwayat buruk</strong> → durasi ban bisa diperpanjang</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF6B35;">→</span> Staff boleh menyesuaikan dengan bukti valid</li>
+            </ul>
+        </div>
+
+        <!-- STRUKTUR PERAN -->
+        <h2 id="Staff">👥 Struktur Peran & Tanggung Jawab Staff</h2>
+        
+        <div class="section-intro">
+            <p>Staff di Cozy Small Park berperan sebagai <strong>penjaga suasana, penghubung antar pemain, serta pelindung nilai-nilai komunitas</strong>. Mereka tidak hanya mengawasi, tetapi juga membimbing, membantu, dan menciptakan rasa aman di dalam game.</p>
+        </div>
+
+        <h3>📌 Tugas Utama Staff</h3>
+        <div class="role-box">
+            <ul>
+                <li>Memantau aktivitas pemain secara aktif di dalam game, terutama di area-area ramai atau sensitif</li>
+                <li>Menangani laporan pelanggaran dengan cepat dan objektif, berdasarkan bukti dan panduan moderasi</li>
+                <li>Memberikan peringatan secara sopan dan tegas kepada pemain yang melakukan pelanggaran ringan</li>
+                <li>Melakukan tindakan moderasi (mute, kick, ban sementara) sesuai kebijakan yang berlaku</li>
+                <li>Melaporkan kasus serius ke Senior Staff atau Head Staff untuk ditindaklanjuti lebih lanjut</li>
+                <li>Mencatat insiden penting dalam log moderasi sebagai bahan evaluasi internal dan dokumentasi</li>
+                <li>Bersikap netral, tidak memihak, dan menjaga reputasi komunitas</li>
+            </ul>
+        </div>
+
+        <h3>🎯 Regular Staff</h3>
+        <div class="role-box">
+            <h4>Wewenang & Tanggung Jawab</h4>
+            <ul>
+                <li>Memantau chat, VC, dan aktivitas pemain secara aktif</li>
+                <li>Memberikan warning/teguran ringan & penjelasan kepada pemain</li>
+                <li>Melakukan mute, kick, atau ban sementara (sesuai tabel durasi)</li>
+                <li>Wajib mencatat setiap insiden dalam log moderasi</li>
+                <li><strong>TIDAK boleh</strong> menjatuhkan permanent ban tanpa persetujuan Head Staff</li>
+                <li>Harus eskalasi kasus serius/berat ke Head Staff untuk keputusan akhir</li>
+            </ul>
+        </div>
+
+        <h3>👑 Head Staff</h3>
+        <div class="role-box">
+            <h4>Wewenang & Tanggung Jawab</h4>
+            <ul>
+                <li>Memiliki wewenang <strong>keputusan final</strong> untuk semua kasus moderasi</li>
+                <li>Menangani permanent ban dan kasus eskalasi dari Staff</li>
+                <li>Meninjau keputusan Staff jika ada keberatan dari pemain</li>
+                <li>Mendiskusikan kasus serius bersama Staff sebelum mengambil tindakan akhir</li>
+                <li>Bertanggung jawab atas konsistensi, fairness, dan integritas moderasi di Cozy Small Park</li>
+                <li>Membuat keputusan akhir dalam kasus pelanggaran serius non-teknis</li>
+            </ul>
+        </div>
+
+        <h3>🚫 Batasan Kewenangan Staff</h3>
+        <div class="critical-box">
+            <h4>DILARANG</h4>
+            <ul>
+                <li>Menggunakan kekuasaan moderasi untuk kepentingan pribadi atau membantu teman secara tidak adil</li>
+                <li>Melakukan tindakan tanpa dasar atau bukti yang cukup</li>
+                <li>Menyebarkan isi laporan atau diskusi internal kepada pihak luar</li>
+                <li>Berdebat secara publik terkait keputusan moderasi; semua penjelasan diberikan dengan tenang dan eskalasi dilakukan secara internal</li>
+            </ul>
+        </div>
+
+        <h3>💬 Komunikasi dengan Pemain</h3>
+        <div class="role-box">
+            <h4>Panduan Berkomunikasi</h4>
+            <ul>
+                <li>Gunakan bahasa yang sopan, jelas, tenang, dan tidak emosional (meskipun menghadapi pemain sulit)</li>
+                <li>Setiap peringatan atau teguran wajib disertai penjelasan singkat namun informatif mengenai jenis pelanggarannya</li>
+                <li>Staff diperbolehkan menjawab pertanyaan pemain, memberi arahan, atau menjelaskan fitur game jika diperlukan</li>
+                <li>Dalam situasi konflik, Staff harus bertindak sebagai penengah, bukan pemicu masalah</li>
+                <li>Selalu berikan penjelasan dengan tenang dan profesional, bahkan dalam situasi tegang</li>
+            </ul>
+        </div>
+
+        <!-- CATATAN PENTING -->
+        <h2>📌 Catatan Penting Staff</h2>
+        
+        <div class="list-grid">
+            <div class="list-grid-item">
+                <h4>✅ Wajib Dilakukan</h4>
+                <ul>
+                    <li>Simpan bukti (chat, log, video)</li>
+                    <li>Catat nama, waktu, jenis pelanggaran</li>
+                    <li>Gunakan hukuman paling ringan dulu</li>
+                    <li>Bersikap profesional & netral</li>
+                    <li>Eskalasi kasus serius ke Head Staff</li>
+                </ul>
+            </div>
+
+            <div class="list-grid-item">
+                <h4>❌ DILARANG</h4>
+                <ul>
+                    <li>Gunakan kekuasaan untuk pribadi</li>
+                    <li>Tindakan tanpa bukti cukup</li>
+                    <li>Sebarkan laporan internal</li>
+                    <li>Berdebat di publik</li>
+                    <li>Ban permanent tanpa persetujuan Head</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TEMPLATE KOMUNIKASI -->
+        <h2>💬 Template Komunikasi</h2>
+
+        <h3>Peringatan Umum</h3>
+        <div class="template-box">
+            "Halo [Nama], kami lihat kamu [jenis pelanggaran]. Tolong jaga etika komunikasi di Cozy Small Park. Terima kasih! 😊"
+        </div>
+
+        <h3>Sebelum Tindakan Lanjut</h3>
+        <div class="template-box">
+            "[Nama], ini adalah warning kedua mu. Jika terus melanggar, kami akan mute/ban. Mari jaga suasana bersama!"
+        </div>
+
+        <h3>Setelah Tindakan</h3>
+        <div class="template-box">
+            "[Nama], kami telah melakukan [tindakan] karena [alasan]. Silakan baca rules kami. Semoga bisa berbuat lebih baik! 💙"
+        </div>
+
+        <!-- QUICK REFERENCE -->
+        <h2 id="protokol">⚡ Quick Reference - Decision Tree</h2>
+        <div class="quick-ref">
+            <h4>Pemain melanggar? Ikuti alur ini:</h4>
+            <ol>
+                <li><strong>Pertama kali:</strong> Warning ringan / Mute singkat</li>
+                <li><strong>Kedua kali:</strong> Hukuman naik 1 tingkat</li>
+                <li><strong>Ketiga kali:</strong> Pertimbangkan ban sementara</li>
+                <li><strong>Pattern/Serius:</strong> Lapor Head Staff → Final decision</li>
+                <li><strong>Teknis/Berat:</strong> Langsung Head Staff → Permanent ban?</li>
+            </ol>
+        </div>
+
+        <!-- ESKALASI KE HEAD -->
+        <h2>📞 Eskalasi ke Head Staff</h2>
+        <div class="critical-box">
+            <h4>Konsultasikan kasus ke Head Staff jika:</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Permanent ban diperlukan</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Pelanggaran teknis berat (cheat, exploit, bypass)</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Kasus berulang dengan riwayat panjang</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Ancaman, doxing, atau pelanggaran keamanan</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Ada keberatan dari pemain terhadap keputusan</li>
+                <li style="padding: 8px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #FF4757;">→</span> Staff ragu dengan keputusan yang tepat</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <p><strong>Tujuan Moderasi: Kenyamanan & Keamanan Bersama Cozy Small Park 💙</strong></p>
+    <p>"Staff yang baik adalah yang dihormati karena sikapnya, bukan karena kekuasaannya."</p>
+    <p><strong>Head Staff memiliki keputusan final dalam semua kasus.</strong></p>
+</div>
+
+</body>
+</html>
